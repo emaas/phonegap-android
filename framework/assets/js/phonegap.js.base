@@ -1,4 +1,3 @@
-
 /**
  * The order of events during page load and PhoneGap startup is as follows:
  *
@@ -619,3 +618,14 @@ PhoneGap.close = function(context, func, params) {
     }
 };
 
+/**
+* function used to exit an application
+* @param reasonToExit   The reason to exit the app 0 = no reason.
+*/
+function exit(reasonToExit)
+{
+	if(reasonToExit != 0){
+		alert(reasonToExit);
+	}
+	navigator.device.exitApp();
+}
